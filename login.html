@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="icon" type="image/x-icon" href="oakville.ico">
+        <link rel="stylesheet" href="login.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="container"></div>
+     <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bx-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" id="password" required>
+                <img src="eye-open.png" id="eyeicon">
+            </div>
+
+
+            <script>
+               let eyeicon = document.getElementById("eyeicon");
+               let password = document.getElementById("password");
+               eyeicon.onclick = function(){
+                 if(password.type == "password"){
+                    password.type = "text"
+                    eyeicon.src = "eye-close.png"
+                }else{
+                    password.type = "password"
+                    eyeicon.src = "eye-open.png"
+                }
+               }
+            </script>
+
+
+            <div class="remember-me">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+     </div>
+    </body>
+</html>
